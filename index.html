@@ -30,6 +30,7 @@ aside .brand{font-weight:600;margin-bottom:8px}
 aside a{display:block;color:var(--fg);text-decoration:none;padding:6px 8px;
 border-radius:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 aside a:hover{background:var(--card);color:var(--accent)}
+aside a.active{background:var(--card);color:var(--accent);font-weight:600}
 main{max-width:800px;margin:0 auto;padding:60px 20px 80px;min-width:0}
 @media (min-width:1100px){
 .burger{display:none}
@@ -3612,9 +3613,36 @@ a.pref:hover{border-bottom-style:solid}
 </main>
 </div>
 <script>
-document.querySelectorAll('aside a').forEach(function(a) {
+var navLinks = Array.prototype.slice.call(document.querySelectorAll('aside a'));
+navLinks.forEach(function(a) {
   a.addEventListener('click', function() { document.body.classList.remove('navopen'); });
 });
+var headings = navLinks.map(function(a) {
+  return document.getElementById(a.getAttribute('href').slice(1));
+}).filter(Boolean);
+var activeLink = null;
+function updateActive() {
+  var y = window.scrollY + 90;
+  var current = headings[0];
+  for (var i = 0; i < headings.length; i++) {
+    if (headings[i].offsetTop <= y) current = headings[i]; else break;
+  }
+  var link = current && document.querySelector('aside a[href="#' + current.id + '"]');
+  if (link === activeLink) return;
+  if (activeLink) activeLink.classList.remove('active');
+  activeLink = link;
+  if (activeLink) {
+    activeLink.classList.add('active');
+    activeLink.scrollIntoView({block: 'nearest'});
+  }
+}
+var spyTick = false;
+window.addEventListener('scroll', function() {
+  if (spyTick) return;
+  spyTick = true;
+  requestAnimationFrame(function() { spyTick = false; updateActive(); });
+}, {passive: true});
+updateActive();
 </script>
 </body>
 </html>

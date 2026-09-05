@@ -2642,6 +2642,48 @@ main li{margin:8px 0}
 <text x="340" y="284" font-size="12" fill="var(--muted)" text-anchor="middle">разметка 1.17 у остановок — красная; ещё запреты: переезды, тоннели, мосты,</text>
 <text x="340" y="302" font-size="12" fill="var(--muted)" text-anchor="middle">видимость &lt; 100 м, пересечения проезжих частей и ближе 5 м от них</text>
 </svg><figcaption>Три самых экзаменационных метража: 5 м до пешеходного перехода (за ним — можно), 15 м от остановки в обе стороны, 3 м свободного пространства до сплошной или противоположного края. Для стоянки добавь: 50 м от переезда и запрет на главной вне города.</figcaption></figure>
+<figure><svg width="100%" viewBox="0 0 680 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Пункт 84-6: остановка у Т-образного перекрёстка</title>
+<defs><marker id="arr846" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<!-- горизонтальная дорога -->
+<rect x="0" y="110" width="680" height="120" fill="var(--road)" stroke="var(--roadline)" stroke-width="1"/>
+<!-- боковой проезд снизу -->
+<rect x="290" y="230" width="120" height="150" fill="var(--road)" stroke="var(--roadline)" stroke-width="1"/>
+<rect x="292" y="226" width="116" height="8" fill="var(--road)" stroke="none"/>
+<line x1="350" y1="238" x2="350" y2="380" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="10 9"/>
+<!-- СПЛОШНАЯ осевая на главной дороге -->
+<line x1="0" y1="170" x2="680" y2="170" stroke="var(--paint)" stroke-width="3"/>
+<text x="70" y="163" font-size="12" fill="var(--muted)">сплошная линия</text>
+<text x="70" y="192" font-size="12" fill="var(--muted)">(или разделительная полоса)</text>
+
+<!-- верхняя сторона: стоять МОЖНО -->
+<rect x="316" y="114" width="52" height="26" rx="5" fill="var(--carfill)" stroke="var(--ok)" stroke-width="2.5"/>
+<circle cx="392" cy="127" r="11" fill="none" stroke="var(--ok)" stroke-width="2.5"/>
+<path d="M386 127 L390 132 L398 122" fill="none" stroke="var(--ok)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="342" y="98" font-size="12" fill="var(--ok)" text-anchor="middle">сторона напротив проезда:</text>
+<text x="342" y="82" font-size="12" fill="var(--ok)" text-anchor="middle">исключение — можно</text>
+
+<!-- нижняя сторона слева: угол пересечения, НЕЛЬЗЯ -->
+<rect x="238" y="198" width="52" height="26" rx="5" fill="var(--car2fill)" stroke="var(--bad)" stroke-width="2"/>
+<circle cx="264" cy="252" r="11" fill="none" stroke="var(--bad)" stroke-width="2.5"/>
+<line x1="257" y1="245" x2="271" y2="259" stroke="var(--bad)" stroke-width="2.5"/>
+<line x1="271" y1="245" x2="257" y2="259" stroke="var(--bad)" stroke-width="2.5"/>
+<text x="180" y="284" font-size="12" fill="var(--bad)" text-anchor="middle">ближе 5 м от края</text>
+<text x="180" y="300" font-size="12" fill="var(--bad)" text-anchor="middle">пересекаемой ПЧ — нельзя</text>
+
+<!-- нижняя сторона справа: 5 м и дальше — можно -->
+<line x1="410" y1="250" x2="470" y2="250" stroke="var(--muted)" stroke-width="1.5" marker-start="url(#arr846)" marker-end="url(#arr846)"/>
+<text x="440" y="270" font-size="12" fill="var(--muted)" text-anchor="middle">5 м</text>
+<rect x="478" y="198" width="52" height="26" rx="5" fill="var(--carfill)" stroke="var(--ok)" stroke-width="2.5"/>
+<circle cx="554" cy="211" r="11" fill="none" stroke="var(--ok)" stroke-width="2.5"/>
+<path d="M548 211 L552 216 L560 206" fill="none" stroke="var(--ok)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="520" y="288" font-size="12" fill="var(--ok)" text-anchor="middle">отступил 5 м от края</text>
+<text x="520" y="304" font-size="12" fill="var(--ok)" text-anchor="middle">проезда — можно</text>
+
+<text x="340" y="340" font-size="12" fill="var(--muted)" text-anchor="middle">Т-образный перекрёсток. Обычное правило: на пересечении проезжих частей и ближе 5 м от него не стоять.</text>
+<text x="340" y="358" font-size="12" fill="var(--muted)" text-anchor="middle">Исключение — сторона НАПРОТИВ бокового проезда, когда осевая сплошная (или есть разделительная полоса):</text>
+<text x="340" y="376" font-size="12" fill="var(--muted)" text-anchor="middle">налево с проезда всё равно никто не поедет, стоящая машина там никому не мешает.</text>
+</svg><figcaption>Подпункт 6 на пальцах. У Т-образного перекрёстка действует обычный запрет: на самом пересечении и ближе 5 м от края пересекаемой проезжей части не стоять (красный крест). Но у стороны, которая НАПРОТИВ бокового проезда, пересечения нет — это ровный край дороги. Если осевая там сплошная или есть разделительная полоса, поворот налево с проезда и на проезд через неё и так запрещён, значит стоящая машина не перекрывает ничьи траектории — поэтому Правила разрешают там остановку. Прерывистая осевая — исключение не действует.</figcaption></figure>
 <div class="signs"><div class="sign"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="6" fill="#4a4a48"/><polyline points="8,36 16,28 24,36 32,28 40,36 48,28 56,36" fill="none" stroke="#d23b3b" stroke-width="3.5"/></svg><span>Разметка 1.17 — место остановки маршрутных ТС (в Армении красная)</span></div></div>
 <p id="p85"><span class="num">85.</span> Остановка маршрутных транспортных средств запрещается и в местах вне зоны остановки таких транспортных средств, кроме вынужденной остановки в местах, где остановка запрещена.</p>
 <p id="p86"><span class="num">86.</span> Стоянка запрещается:</p>

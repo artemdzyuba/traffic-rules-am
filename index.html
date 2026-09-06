@@ -2825,31 +2825,77 @@ main li{margin:8px 0}
 </svg><figcaption>Стрелка доп. секции, горящая одновременно с красным (или жёлтым), делает тебя «выезжающим со второстепенной»: ехать в её направлении можно, но уступив всем, кто идёт с других направлений по полному зелёному. Та же логика распространяется и на трамвай (пункт 92).</figcaption></figure>
 <p id="p92"><span class="num">92.</span> Если сигналы светофора или регулировщика разрешают движение одновременно трамваю и безрельсовым транспортным средствам, то трамвай имеет преимущество независимо от направления его движения. Однако при движении в направлении стрелки, включенной в дополнительной секции одновременно с красным или желтым сигналом светофора, трамвай должен уступить дорогу транспортным средствам, движущимся с других направлений.</p>
 <figure><svg width="100%" viewBox="0 0 680 420" role="img" xmlns="http://www.w3.org/2000/svg">
-<title>Общий зелёный: трамвай первый</title>
+<title>Общий зелёный: попутный трамвай первый</title>
 <defs><marker id="arr92" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="150" width="680" height="120" fill="var(--road)" stroke="var(--roadline)" stroke-width="1"/>
 <rect x="280" y="0" width="120" height="420" fill="var(--road)" stroke="var(--roadline)" stroke-width="1"/>
 <rect x="282" y="146" width="116" height="128" fill="var(--road)" stroke="none"/>
 <line x1="0" y1="210" x2="276" y2="210" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
 <line x1="404" y1="210" x2="680" y2="210" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
-<line x1="340" y1="0" x2="340" y2="146" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
-<line x1="340" y1="274" x2="340" y2="420" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
-<line x1="0" y1="198" x2="680" y2="198" stroke="var(--lane)" stroke-width="1.2"/><line x1="0" y1="206" x2="680" y2="206" stroke="var(--lane)" stroke-width="1.2"/><line x1="0" y1="214" x2="680" y2="214" stroke="var(--lane)" stroke-width="1.2"/><line x1="0" y1="222" x2="680" y2="222" stroke="var(--lane)" stroke-width="1.2"/>
-<rect x="412" y="286" width="16" height="40" rx="4" fill="#333"/><circle cx="420" cy="296" r="5" fill="#5a2b2b"/><circle cx="420" cy="306" r="5" fill="#5a5028"/><circle cx="420" cy="316" r="5" fill="#3ecf6a"/>
-<rect x="252" y="60" width="16" height="40" rx="4" fill="#333"/><circle cx="260" cy="70" r="5" fill="#5a2b2b"/><circle cx="260" cy="80" r="5" fill="#5a5028"/><circle cx="260" cy="90" r="5" fill="#3ecf6a"/>
-<rect x="30" y="192" width="120" height="36" rx="4" fill="var(--car2fill)" stroke="var(--car2stroke)" stroke-width="1.5"/>
-<rect x="40" y="199" width="14" height="10" rx="2" fill="var(--card)"/><rect x="62" y="199" width="14" height="10" rx="2" fill="var(--card)"/><rect x="84" y="199" width="14" height="10" rx="2" fill="var(--card)"/><rect x="106" y="199" width="14" height="10" rx="2" fill="var(--card)"/><rect x="128" y="199" width="14" height="10" rx="2" fill="var(--card)"/>
-<text x="90" y="250" font-size="12" fill="var(--muted)" text-anchor="middle">трамвай</text>
-<path d="M156 210 H620" fill="none" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arr92)"/>
-<circle cx="90" cy="170" r="12" fill="var(--ok)"/><text x="90" y="175" font-size="13" fill="#fff" text-anchor="middle">1</text>
-<rect x="352" y="342" width="28" height="46" rx="5" fill="var(--carfill)" stroke="var(--carstroke)" stroke-width="1.5"/>
-<path d="M366 336 V80" fill="none" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arr92)"/>
-<circle cx="366" cy="210" r="9" fill="none" stroke="var(--bad)" stroke-width="2.5"/>
-<circle cx="416" cy="362" r="12" fill="var(--warn)"/><text x="416" y="367" font-size="13" fill="#fff" text-anchor="middle">2</text>
-<text x="60" y="330" font-size="13" fill="var(--fg)" text-anchor="start">зелёный горит обоим — трамвай проезжает</text>
-<text x="60" y="350" font-size="13" fill="var(--fg)" text-anchor="start">первым независимо от направления (пункт 92).</text>
-<text x="60" y="370" font-size="13" fill="var(--fg)" text-anchor="start">Исключение: трамвай по стрелке с красным — уступает</text>
-</svg><figcaption>Сигналы разрешают движение и тебе, и трамваю — трамвай проезжает первым, куда бы он ни ехал. Его единственная слабость на регулируемом перекрёстке — стрелка доп. секции при красном/жёлтом: по ней трамвай сам уступает всем.</figcaption></figure>
+<line x1="330" y1="0" x2="330" y2="420" stroke="var(--lane)" stroke-width="1.2"/>
+<line x1="346" y1="0" x2="346" y2="420" stroke="var(--lane)" stroke-width="1.2"/>
+<text x="316" y="404" font-size="11" fill="var(--muted)" text-anchor="end">трамвайные пути</text>
+<rect x="412" y="286" width="16" height="40" rx="4" fill="#333"/>
+<circle cx="420" cy="296" r="5" fill="#5a2b2b"/>
+<circle cx="420" cy="306" r="5" fill="#5a5028"/>
+<circle cx="420" cy="316" r="5" fill="#3ecf6a"/>
+<rect x="322" y="240" width="32" height="92" rx="4" fill="var(--car2fill)" stroke="var(--car2stroke)" stroke-width="1.5"/>
+<rect x="327" y="250" width="22" height="12" rx="2" fill="var(--card)"/>
+<rect x="327" y="270" width="22" height="12" rx="2" fill="var(--card)"/>
+<rect x="327" y="290" width="22" height="12" rx="2" fill="var(--card)"/>
+<text x="310" y="290" font-size="12" fill="var(--muted)" text-anchor="end">трамвай</text>
+<path d="M338 234 V60" fill="none" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arr92)"/>
+<circle cx="376" cy="252" r="12" fill="var(--ok)"/>
+<text x="376" y="257" font-size="13" fill="#fff" text-anchor="middle">1</text>
+<rect x="360" y="342" width="28" height="46" rx="5" fill="var(--carfill)" stroke="var(--carstroke)" stroke-width="1.5"/>
+<path d="M374 336 V260 Q374 194 300 194 H80" fill="none" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arr92)"/>
+<circle cx="420" cy="362" r="12" fill="var(--warn)"/>
+<text x="420" y="367" font-size="13" fill="#fff" text-anchor="middle">2</text>
+<circle cx="338" cy="194" r="9" fill="none" stroke="var(--bad)" stroke-width="2.5"/>
+<svg x="598" y="56" width="60" height="30" viewBox="0 0 1400 700" aria-hidden="true">
+  <title
+     id="s5151_title14100">5.15.1 Направления движения по полосам</title>
+  <defs
+     id="s5151_defs4" />
+  
+  
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="s5151_layer1"
+     transform="translate(0,-352.36218)">
+    <rect
+       ry="45"
+       rx="45"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:1"
+       id="s5151_rect7667"
+       width="1400"
+       height="700"
+       x="0"
+       y="352.36218" />
+    <path
+       style="opacity:1;color:#000000;fill:#0d69e1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.54299997999999980;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 45 20 C 31.15 20 20 31.15 20 45 L 20 655 C 20 668.85 31.15 680 45 680 L 303.34375 680 L 303.34375 455 C 303.34375 429.2267 282.42955 408.34375 256.65625 408.34375 L 233.34375 408.34375 L 230.9375 466.78125 L 72.375 373.21875 L 233.34375 280 L 233.34375 338.34375 L 256.65625 338.34375 C 273.24496 338.34375 289.05558 341.78993 303.34375 348.03125 L 303.34375 233.34375 L 245 233.34375 L 338.34375 70 L 431.65625 233.34375 L 373.34375 233.34375 L 373.34375 455 L 373.34375 680 L 466.65625 680 L 466.65625 606.65625 L 490 606.65625 L 490 680 L 665 680 L 665 233.34375 L 606.65625 233.34375 L 700 70 L 793.34375 233.34375 L 735 233.34375 L 735 680 L 910 680 L 910 606.65625 L 933.34375 606.65625 L 933.34375 680 L 1026.6562 680 L 1026.6562 303.34375 C 1026.6562 238.9105 1078.9099 186.65625 1143.3438 186.65625 L 1166.6562 186.65625 L 1166.6562 128.34375 L 1330 221.65625 L 1166.6562 315 L 1166.6562 256.65625 L 1143.3438 256.65625 C 1117.5702 256.65625 1096.6562 277.57033 1096.6562 303.34375 L 1096.6562 680 L 1355 680 C 1368.85 680 1380 668.85 1380 655 L 1380 45 C 1380 31.15 1368.85 20 1355 20 L 45 20 z M 466.65625 326.65625 L 490 326.65625 L 490 396.65625 L 466.65625 396.65625 L 466.65625 326.65625 z M 910 326.65625 L 933.34375 326.65625 L 933.34375 396.65625 L 910 396.65625 L 910 326.65625 z M 466.65625 420 L 490 420 L 490 490 L 466.65625 490 L 466.65625 420 z M 910 420 L 933.34375 420 L 933.34375 490 L 910 490 L 910 420 z M 466.65625 513.34375 L 490 513.34375 L 490 583.34375 L 466.65625 583.34375 L 466.65625 513.34375 z M 910 513.34375 L 933.34375 513.34375 L 933.34375 583.34375 L 910 583.34375 L 910 513.34375 z "
+       transform="translate(0,352.36218)"
+       id="s5151_rect9536" />
+    <rect
+       y="353.36218"
+       x="1"
+       height="698"
+       width="1398"
+       id="s5151_rect7101"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1.99999988000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:1"
+       rx="44"
+       ry="44" />
+  </g>
+</svg>
+<text x="628" y="140" font-size="11" fill="var(--muted)" text-anchor="middle">налево — из твоей</text>
+<text x="628" y="154" font-size="11" fill="var(--muted)" text-anchor="middle">полосы, не с путей</text>
+<text x="60" y="316" font-size="13" fill="var(--fg)">зелёный общий, трамвай попутный</text>
+<text x="60" y="336" font-size="13" fill="var(--fg)">едет прямо по путям — твоя дуга налево</text>
+<text x="60" y="356" font-size="13" fill="var(--fg)">режет его дорогу: трамвай первый,</text>
+<text x="60" y="376" font-size="13" fill="var(--fg)">куда бы он ни ехал (пункт 92)</text>
+</svg><figcaption>Зелёный горит вам обоим: попутный трамвай идёт прямо по путям, а твоя дуга налево их пересекает — трамвай первый, куда бы он ни ехал. Знак 5.15.1 здесь важен: он разрешает тебе поворачивать из своей полосы, поэтому на путях ты не стоишь (без него пункт 40 требовал бы занять сами пути). Единственная слабость трамвая на регулируемом перекрёстке — стрелка доп. секции при красном/жёлтом: по ней он сам уступает всем.</figcaption></figure>
 <p id="p93"><span class="num">93.</span> Водитель, въехавший на перекресток при разрешающем сигнале светофора, должен выехать в намеченном направлении независимо от сигналов светофора на выходе с перекрестка. Однако, если на перекрестке перед светофорами, расположенными на пути следования водителя, имеются разметка <span class="sref" data-k="m1.12">1.12</span> “Стоп-линия” (или знаки <span class="sref" data-k="s6.16">6.16</span> “Стоп-линия”), водитель обязан руководствоваться сигналами каждого светофора.</p>
 <figure><svg width="100%" viewBox="0 0 680 420" role="img" xmlns="http://www.w3.org/2000/svg">
 <title>Въехал на зелёный — завершай манёвр</title>

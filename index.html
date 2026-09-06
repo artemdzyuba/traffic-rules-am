@@ -2713,30 +2713,43 @@ main li{margin:8px 0}
 <line x1="404" y1="210" x2="680" y2="210" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
 <line x1="340" y1="0" x2="340" y2="146" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
 <line x1="340" y1="274" x2="340" y2="420" stroke="var(--lane)" stroke-width="1.5" stroke-dasharray="12 10"/>
-<!-- светофоры: зелёный обоим -->
-<rect x="252" y="286" width="16" height="40" rx="4" fill="#333"/>
-<circle cx="260" cy="296" r="5" fill="#5a2b2b"/>
-<circle cx="260" cy="306" r="5" fill="#5a5028"/>
-<circle cx="260" cy="316" r="5" fill="#3ecf6a"/>
-<rect x="412" y="94" width="16" height="40" rx="4" fill="#333"/>
-<circle cx="420" cy="104" r="5" fill="#5a2b2b"/>
-<circle cx="420" cy="114" r="5" fill="#5a5028"/>
-<circle cx="420" cy="124" r="5" fill="#3ecf6a"/>
-<!-- встречный: прямо, преимущество -->
-<rect x="352" y="40" width="28" height="48" rx="5" fill="var(--car2fill)" stroke="var(--car2stroke)" stroke-width="1.5"/>
-<path d="M366 94 V360" fill="none" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arr90)"/>
-<circle cx="416" cy="64" r="12" fill="var(--ok)"/>
-<text x="416" y="69" font-size="13" fill="#fff" text-anchor="middle">1</text>
-<!-- ты: налево, уступаешь -->
-<rect x="300" y="340" width="28" height="48" rx="5" fill="var(--carfill)" stroke="var(--carstroke)" stroke-width="1.5"/>
-<path d="M314 334 V250 Q314 180 240 180 H60" fill="none" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arr90)"/>
-<circle cx="258" cy="360" r="12" fill="var(--warn)"/>
-<text x="258" y="365" font-size="13" fill="#fff" text-anchor="middle">2</text>
-<text x="120" y="330" font-size="13" fill="var(--fg)">зелёный горит обоим:</text>
-<text x="120" y="350" font-size="13" fill="var(--fg)">налево едешь, лишь</text>
-<text x="120" y="370" font-size="13" fill="var(--fg)">пропустив встречных</text>
-<text x="120" y="390" font-size="13" fill="var(--fg)">прямо и направо</text>
-</svg><figcaption>Зелёный разрешает движение и тебе, и встречному. Поворачивая налево, ты пересекаешь его траекторию — уступи всем встречным, едущим прямо и направо, и только потом заверши манёвр.</figcaption></figure>
+<!-- светофоры: зелёный обоим (каждый на правой стороне своего подхода) -->
+<rect x="412" y="286" width="16" height="40" rx="4" fill="#333"/>
+<circle cx="420" cy="296" r="5" fill="#5a2b2b"/>
+<circle cx="420" cy="306" r="5" fill="#5a5028"/>
+<circle cx="420" cy="316" r="5" fill="#3ecf6a"/>
+<rect x="252" y="60" width="16" height="40" rx="4" fill="#333"/>
+<circle cx="260" cy="70" r="5" fill="#5a2b2b"/>
+<circle cx="260" cy="80" r="5" fill="#5a5028"/>
+<circle cx="260" cy="90" r="5" fill="#3ecf6a"/>
+<!-- встречный №1: прямо (дальний), преимущество -->
+<rect x="300" y="16" width="28" height="46" rx="5" fill="var(--car2fill)" stroke="var(--car2stroke)" stroke-width="1.5"/>
+<path d="M314 68 V96" fill="none" stroke="var(--ok)" stroke-width="2.5"/>
+<path d="M314 160 V380" fill="none" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arr90)"/>
+<path d="M314 96 V160" fill="none" stroke="var(--ok)" stroke-width="2.5"/>
+<circle cx="352" cy="38" r="12" fill="var(--ok)"/>
+<text x="352" y="43" font-size="13" fill="#fff" text-anchor="middle">1</text>
+<!-- встречный №2: направо (ближний к перекрёстку) -->
+<rect x="300" y="98" width="28" height="44" rx="5" fill="var(--car2fill)" stroke="var(--car2stroke)" stroke-width="1.5"/>
+<path d="M314 148 V156 Q314 172 292 172 H100" fill="none" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arr90)"/>
+<circle cx="352" cy="118" r="12" fill="var(--ok)"/>
+<text x="352" y="123" font-size="13" fill="#fff" text-anchor="middle">1</text>
+<!-- ты: налево, уступаешь обоим -->
+<rect x="352" y="342" width="28" height="46" rx="5" fill="var(--carfill)" stroke="var(--carstroke)" stroke-width="1.5"/>
+<path d="M366 336 V256 Q366 194 300 194 H80" fill="none" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arr90)"/>
+<circle cx="416" cy="362" r="12" fill="var(--warn)"/>
+<text x="416" y="367" font-size="13" fill="#fff" text-anchor="middle">2</text>
+<!-- точки конфликта -->
+<circle cx="314" cy="194" r="9" fill="none" stroke="var(--bad)" stroke-width="2.5"/>
+<circle cx="196" cy="183" r="9" fill="none" stroke="var(--bad)" stroke-width="2.5"/>
+<text x="454" y="196" font-size="12" fill="var(--bad)">твоя дуга режет</text>
+<text x="454" y="212" font-size="12" fill="var(--bad)">путь встречного прямо…</text>
+<text x="60" y="236" font-size="12" fill="var(--bad)">…и целитесь в одну полосу</text>
+<text x="60" y="252" font-size="12" fill="var(--bad)">со встречным направо</text>
+<text x="440" y="350" font-size="13" fill="var(--fg)">зелёный горит всем:</text>
+<text x="440" y="370" font-size="13" fill="var(--fg)">налево едешь, лишь пропустив</text>
+<text x="440" y="390" font-size="13" fill="var(--fg)">встречных прямо и направо</text>
+</svg><figcaption>Зелёный разрешает движение всем, но у поворота налево два конфликта сразу: твоя дуга пересекает путь встречного, едущего прямо, а со встречным, поворачивающим направо, вы целитесь в одну и ту же полосу. Поэтому пункт 90 велит уступить встречным и прямо, и направо — и только потом завершать манёвр.</figcaption></figure>
 <p id="p91"><span class="num">91.</span> При движении в направлении стрелки, включенной в дополнительной секции одновременно с желтым или красным сигналом светофора, водитель обязан уступить дорогу транспортным средствам, движущимся с других направлений.</p>
 <p id="p92"><span class="num">92.</span> Если сигналы светофора или регулировщика разрешают движение одновременно трамваю и безрельсовым транспортным средствам, то трамвай имеет преимущество независимо от направления его движения. Однако при движении в направлении стрелки, включенной в дополнительной секции одновременно с красным или желтым сигналом светофора, трамвай должен уступить дорогу транспортным средствам, движущимся с других направлений.</p>
 <p id="p93"><span class="num">93.</span> Водитель, въехавший на перекресток при разрешающем сигнале светофора, должен выехать в намеченном направлении независимо от сигналов светофора на выходе с перекрестка. Однако, если на перекрестке перед светофорами, расположенными на пути следования водителя, имеются разметка <span class="sref" data-k="m1.12">1.12</span> “Стоп-линия” (или знаки <span class="sref" data-k="s6.16">6.16</span> “Стоп-линия”), водитель обязан руководствоваться сигналами каждого светофора.</p>
